@@ -35,8 +35,8 @@ function prepareObjects(jsonData) {
         const animal = Object.create(Animal);
         console.log(Animal);
         animal.name = jsonObject.fullname.substring(0, firstSpace);
-        animal.type = jsonObject.fullname.substring(firstSpace, lastSpace);
-        animal.desc = jsonObject.fullname.substring(lastSpace);
+        animal.type = jsonObject.fullname.substring(lastSpace);
+        animal.desc = jsonObject.fullname.substring(firstSpace + 5, lastSpace);
         animal.age = jsonObject.age;
 
         // TODO: MISSING CODE HERE !!!
